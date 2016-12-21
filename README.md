@@ -17,12 +17,29 @@ The code in this repository combines 4 algorithms:
 
 2. Rejection sampling with an exponential proposal distribution.
 
-3. [Chopin's algorithm](https://arxiv.org/abs/1201.6140), as implemented by 
-   Dolle and Mazet. 
+3. [Chopin's algorithm](https://arxiv.org/abs/1201.6140), as implemented by
+   Dolle and Mazet.
 
 4. [Robert's algorithm](https://arxiv.org/abs/0907.4010)
 
 Each of these algorithms is used in a different region of parameter space.
 
+The dtnorm function is in src/dtnorm.h and src/dtnorm.c. For a usage
+example, see test/example.c. A unit test is in test/xdtnorm.c.
+
+To compile and run the example:
+
+	cd test
+	make example
+	./example
+
+To compile and run the unit test
+
+	cd test
+	make xdtnorm
+	./xdtnorm
+
+The unit test takes a single optional argument, `-v`, which will
+provide verbose output.
 
 

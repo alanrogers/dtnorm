@@ -103,8 +103,8 @@ int main(int argc, char **argv) {
     int         verbose = 0;
     double      a;              // Left bound
     double      b;              // Right bound
-    double      mu = 0;         // Mean
-    double      sigma = 1;      // Standard deviation
+    double      mu = 0.1;       // Mean
+    double      sigma = 0.75;   // Standard deviation
     int         nreps = 1e6;    // Number of random variates to generate
 
     if(argc==2 && 0==strcmp("-v", argv[1]))

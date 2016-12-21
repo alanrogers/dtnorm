@@ -42,8 +42,12 @@ XDTNORM := xdtnorm.o dtnorm.o
 xdtnorm : $(XDTNORM)
 	$(CC) $(CFLAGS) -o $@ $(XDTNORM) $(lib)
 
+EXAMPLE := example.o dtnorm.o
+example : $(EXAMPLE)
+	$(CC) $(CFLAGS) -o $@ $(EXAMPLE) $(lib)
+
 # Make dependencies file
-depend : *.c 
+depend : *.c
 	echo '#Automatically generated dependency info' > depend
 	$(CC) -MM $(incl) *.c >> depend
 
