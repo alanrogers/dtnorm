@@ -13,14 +13,14 @@ that other algorithms work better in some regions of parameter space.
 
 The code in this repository combines 4 algorithms:
 
-    1. Rejection sampling with a Gaussian proposal distribution
+1. Rejection sampling with a Gaussian proposal distribution
 
-    2. Rejection sampling with an exponential proposal distribution.
+2. Rejection sampling with an exponential proposal distribution.
 
-    3. [Chopin's algorithm](https://arxiv.org/abs/1201.6140), as implemented by 
-       Dolle and Mazet. 
+3. [Chopin's algorithm](https://arxiv.org/abs/1201.6140), as implemented by 
+   Dolle and Mazet. 
 
-    4. [Robert's algorithm](https://arxiv.org/abs/0907.4010)
+4. [Robert's algorithm](https://arxiv.org/abs/0907.4010)
 
 Each of these algorithms is used in a different region of parameter space.
 
