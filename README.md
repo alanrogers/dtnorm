@@ -24,8 +24,9 @@ The code in this repository combines 4 algorithms:
 
 Each of these algorithms is used in a different region of parameter space.
 
-The dtnorm function is in src/dtnorm.h and src/dtnorm.c. For a usage
-example, see test/example.c. A unit test is in test/xdtnorm.c.
+The dtnorm function is in src/dtnorm.h, src/dtnorm_data.h, and
+src/dtnorm.c. For a usage example, see test/example.c. A unit test is
+in test/xdtnorm.c.
 
 To compile and run the example:
 
