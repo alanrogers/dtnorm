@@ -238,7 +238,7 @@ double yl(int k) {
         return yu[k + 1];
 }
 
-// Rejection algorithm with a truncated exponential proposal
+/// Rejection algorithm with a truncated exponential proposal
 double dtexp(gsl_rng * rng, double a, double b) {
     double      twoasq = 2*a*a;
     double      expab = expm1(-a * (b - a));
