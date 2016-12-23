@@ -62,7 +62,7 @@ double dtexp(gsl_rng *rng, double a, double b);
 /// @param[in] sigma standard deviation of underlying Gaussian
 /// @param[in] a lower end of truncation interval
 /// @param[in] b upper end of truncation interval
-/// @param[in] rng GSL random number generator
+/// @param[inout] rng GSL random number generator
 /// @return truncated Gaussian random variate
 double dtnorm(const double mu, const double sigma, double a, double b,
               gsl_rng *rng) {
