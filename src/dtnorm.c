@@ -54,18 +54,22 @@ int         N = 4001;           // Index of the right tail
 // Compute y_l from y_k
 double yl(int k);
 
-// Rejection algorithm with a truncated exponential proposal
+/// Rejection algorithm with a truncated exponential proposal
 double dtexp(gsl_rng *rng, double a, double b);
 
-// Pseudorandom numbers from a truncated Gaussian distribution
-// The Gaussian has parameters mu (default 0) and sigma (default 1)
-// and is truncated on the interval [a,b].
-// Returns the random variable x and its probability p(x).
-double dtnorm(const double mu, const double sigma, double a, double b, gsl_rng *rng) {
+/// Pseudorandom numbers from a truncated Gaussian distribution
+/// @param[in] mu mean of underlying Gaussian distribution.
+/// @param[in] sigma standard deviation of underlying Gaussian
+/// @param[in] a lower end of truncation interval
+/// @param[in] b upper end of truncation interval
+/// @param[in] rng GSL random number generator
+/// @return truncated Gaussian random variate
+double dtnorm(const double mu, const double sigma, double a, double b,
+              gsl_rng *rng) {
     // Design variables
     //double      xmin = -2.00443204036;  // Left bound
     double      xmax = 3.48672170399;   // Right bound
-    int         kmin = 5;       // if kb-ka < kmin then use a rejection algorithm
+    int         kmin = 5;
     double      INVH = 1631.73284006;   // = 1/h, h being the minimal interval range
     int         I0 = 3271;      // = - floor(x(0)/h)
     double      ALPHA = 1.837877066409345;  // = log(2*pi)
