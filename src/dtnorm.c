@@ -1,21 +1,20 @@
 /**
+ * @brief Pseudorandom numbers from a truncated Gaussian distribution.
  * @file dtnorm.c
  * @author Alan R. Rogers
- * @brief Pseudorandom numbers from a truncated Gaussian distribution.
  *
  * This code began with C++ original written by G. Dolle and V Mazet,
  * which is available at
  * http://miv.u-strasbg.fr/mazet/rtnorm/rtnormCpp.zip.  That original
  * code implemented several methods, including Chopin's algorithm
- * detailed in N. Chopin, "Fast simulation of truncated Gaussian
- * distributions", Stat Comput (2011) 21:275-288. Different methods
- * were used in different regions of parameter space.
+ * (2011. Stat Comput. 21:275-288). Different methods were used in
+ * different regions of parameter space.
  *
  * My own numerical experiments indicated that this method can be
  * improved by changing the criteria used in selecting algorithms. In
  * some regions of parameter space, it is best to use Robert's method
- * (Robert, CP. 1995. Statistics and Computing, 5(2):121). The current
- * code implements the revised method in C.
+ * (1995. Statistics and Computing, 5(2):121). The current code
+ * implements the revised method in C.
  *
  *  Copyright (C) 2012 Guillaume Dollé, Vincent Mazet
  *  (LSIIT, CNRS/Université de Strasbourg)
