@@ -245,7 +245,7 @@ double dtexp(gsl_rng * rng, double a, double b) {
     double      z, e;
 
     do{
-        z = log(1 + gsl_rng_uniform(rng) * expab);
+        z = log1p(gsl_rng_uniform(rng) * expab);
         e = -log(gsl_rng_uniform(rng));
     }while(twoasq*e <= z*z);
     return a - z/a;
